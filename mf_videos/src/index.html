@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MF Videos</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <div id="videos-content"></div>
+    <style>
+      body {
+        font-family: Raleway;
+        background-color: #f4ebd0;
+        margin: 0;
+        padding: 0;
+      }
+
+      #videos-content {
+        color: red;
+      }
+
+      #menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #b68d40;
+        color: #f4ebd0;
+        padding: 100px 10px 10px 10px;
+        height: 100vh;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          color: #f4ebd0;
+          text-decoration: none;
+          padding: 20px 15px;
+          border-radius: 5px;
+          font-size: larger;
+
+          > #count {
+            color: #122620;
+            background-color: #d6ad60;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+          }
+        }
+
+        a:hover {
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="videos-content">Videossss</div>
     <script src="./index.js" type="module"></script>
-</body>
+  </body>
 </html>

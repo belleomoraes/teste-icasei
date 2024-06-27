@@ -36,3 +36,4 @@ app.get('/api/favorites/count', (req, res) => {
 app.listen(3001, () => {
     console.log('BFF listening on port 3001');
 });
+

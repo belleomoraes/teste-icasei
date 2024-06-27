@@ -1,21 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MF Drawer</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      body {
+        font-family: Raleway;
+        background-color: #f4ebd0;
+        margin: 0;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+
+      #menu {
+        background-color: #b68d40;
+        color: #f4ebd0;
+        padding: 100px 10px 10px 10px;
+        height: 100vh;
+        width: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          color: #f4ebd0;
+          text-decoration: none;
+          padding: 20px 15px;
+          border-radius: 5px;
+          font-size: larger;
+
+          > #count {
+            color: #122620;
+            background-color: #d6ad60;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+          }
+        }
+
+        a:hover {
+          opacity: 0.6;
+        }
+      }
+
+      #content {
+        height: 100vh;
+        width: 100vw;
+        padding: 40px;
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#/videos">Vídeos</a></li>
-        <li>
-          <a href="#/favoritos">Favoritos <span id="fav-count">0</span></a>
-        </li>
-      </ul>
-    </nav>
-    <div id="content"></div>
-    <script src="./index.js" type="module"></script>
+    <div id="menu">
+      <a href="#/videos" onclick="loadComponent('mf-videos')">Vídeos</a>
+      <a href="#/favoritos">Favoritos <span id="count">0</span></a>
+    </div>
+    <div id="content">Conteúdo inicial</div>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
